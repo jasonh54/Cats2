@@ -1,7 +1,7 @@
 PImage[] catImages;
+PImage catfood;
 
 
-Food f = new Food();
 ArrayList<Food> foods = new ArrayList<>();
 ArrayList<Cat> cats = new ArrayList<>();
 void setup(){
@@ -17,7 +17,7 @@ void setup(){
   for(int i = 0; i < 10;i++){
     cats.add(new Cat());
   }
-  
+  catfood = loadImage("catfood.png");
 }
 
 void draw(){
