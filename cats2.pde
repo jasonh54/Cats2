@@ -1,9 +1,9 @@
 PImage[] catImages;
 PImage catfood;
 
-Cat c = new Cat();
-ArrayList<Food> foods = new ArrayList<>();
 
+ArrayList<Food> foods = new ArrayList<>();
+ArrayList<Cat> cats = new ArrayList<>();
 void setup(){
   size(800,600);
   String folderPath = sketchPath("cats");
@@ -14,14 +14,22 @@ void setup(){
   for (int i = 0; i < files.length; i++) {
     catImages[i] = loadImage(folderPath+"\\" + files[i].getName());
   }
+  for(int i = 0; i < 10;i++){
+    cats.add(new Cat());
+  }
   catfood = loadImage("catfood.png");
 }
 
 void draw(){
-  c.show();
-  c.move();
+  background(200);
+  f.show();
+
   for (int i = 0; i < foods.size();i++){
     foods.get(i).show();
+  }
+  for(int i = 0; i < 10;i++){
+    cats.get(i).show();
+    cats.get(i).move();
   }
 }
 
