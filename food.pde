@@ -7,4 +7,7 @@ class Food{
     w = 20;
     h = 20;
   }
+  void show(){
+    circle(x,y,w);
+  }
 }
