@@ -5,10 +5,11 @@ class Food{
     //spawn food where the mouse is
     x = mouseX;
     y = mouseY;
-    w = 20;
+    w = 40;
     h = 20;
+    image = catfood;
   }
   void show(){
-    circle(x,y,w);
+    image(this.image,x,y,w,h);
   }
 }
