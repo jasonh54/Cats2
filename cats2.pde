@@ -11,6 +11,7 @@ void setup(){
 void draw(){
   f.show();
   c.show();
+  c.move();
   for (int i = 0; i < foods.size();i++){
     foods.get(i).show();
   }
