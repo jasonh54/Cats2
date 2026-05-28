@@ -22,7 +22,7 @@ void setup(){
 
 void draw(){
   background(200);
-  f.show();
+
 
   for (int i = 0; i < foods.size();i++){
     foods.get(i).show();
