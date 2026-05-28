@@ -1,4 +1,6 @@
 PImage[] catImages;
+
+Cat c = new Cat();
 Food f = new Food();
 
 void setup(){
@@ -7,4 +9,5 @@ void setup(){
 
 void draw(){
   f.show();
+  c.show();
 }
