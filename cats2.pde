@@ -30,6 +30,7 @@ void draw(){
   for(int i = 0; i < 10;i++){
     cats.get(i).show();
     cats.get(i).move();
+    cats.get(i).detectFood();
   }
 }
 
