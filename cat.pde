@@ -1,6 +1,7 @@
 class Cat{
   PImage image;
   float x,y,w,h,vx,vy;
+  Food target;
   public Cat(){
     x = random(0,800);
     y = random(0,600);
@@ -15,13 +16,36 @@ class Cat{
   }
   //program the cat character to move and bounce off the walls
   void move(){
-    this.x += vx;
-    this.y += vy;
+    if (target != null){
+      vx = (target.x - this.x)/20;
+      vy = (target.y - this.y)/20;
+      this.x += vx;
+      this.y += vy;
+    }
+    else{
+      this.x += vx;
+      this.y += vy;
     if(x > 800 || x < 0){
       vx = -vx;
     }
     if(y > 600 || y < 0){
       vy = -vy;
+    }
+    }
+    
+  }
+  void detectFood(){
+    //use a for loop to go through every food
+    //all food objects have a xy location
+    //cats also have a xy location
+    //use the pythagorean therom to calculate distance between their xy coordinates
+    //check if the disance is below 100
+    for (int i = 0; i < foods.size();i++){
+      float a = sq(this.x - foods.get(i).x);
+      float b = sq(this.y - foods.get(i).y);
+      if (sqrt(a - b) < 50){
+        target = foods.get(i);
+      }
     }
   }
 }
