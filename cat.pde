@@ -2,6 +2,7 @@ class Cat{
   PImage image;
   float x,y,w,h,vx,vy;
   Food target;
+  Toy target2;
   public Cat(){
     x = random(0,800);
     y = random(0,600);
@@ -19,6 +20,12 @@ class Cat{
     if (target != null){
       vx = (target.x - this.x)/20;
       vy = (target.y - this.y)/20;
+      this.x += vx;
+      this.y += vy;
+    }
+    else if(target2 != null){
+      vx = (target2.x - this.x)/20;
+      vy = (target2.y - this.y)/20;
       this.x += vx;
       this.y += vy;
     }
@@ -45,6 +52,15 @@ class Cat{
       float b = sq(this.y - foods.get(i).y);
       if (sqrt(a - b) < 50){
         target = foods.get(i);
+      }
+    }
+  }
+  void detectToy(){
+    for (int i = 0; i < toys.size();i++){
+      float a = sq(this.x - toys.get(i).x);
+      float b = sq(this.y - toys.get(i).y);
+      if (sqrt(a - b) < 50){
+        target2 = toys.get(i);
       }
     }
   }
