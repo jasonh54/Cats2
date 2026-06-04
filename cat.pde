@@ -22,6 +22,7 @@ class Cat{
       vy = (target.y - this.y)/20;
       this.x += vx;
       this.y += vy;
+      target.count--;
     }
     else if(target2 != null){
       vx = (target2.x - this.x)/20;
