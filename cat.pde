@@ -41,6 +41,20 @@ class Cat{
     }
     
   }
+  void stopChase(){
+    //if target2 is not in the toys list
+    //set target2 to null
+    if(target2!=null && !toys.contains(target2)){
+      target2 = null;
+      vx = random(-5,5);
+      vy = random(-5,5);
+    }
+    if(target != null && !foods.contains(target)){
+      target = null;
+      vx = random(-5,5);
+      vy = random(-5,5);
+    }
+  }
   void detectFood(){
     //use a for loop to go through every food
     //all food objects have a xy location

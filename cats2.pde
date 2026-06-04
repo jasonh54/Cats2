@@ -40,6 +40,7 @@ void draw(){
     cats.get(i).move();
     cats.get(i).detectFood();
     cats.get(i).detectToy();
+    cats.get(i).stopChase();
   }
 }
 
