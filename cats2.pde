@@ -29,6 +29,7 @@ void draw(){
 
   for (int i = 0; i < foods.size();i++){
     foods.get(i).show();
+    foods.get(i).countdown();
   }
   for (int i = 0; i < toys.size();i++){
     toys.get(i).show();
