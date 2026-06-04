@@ -33,6 +33,7 @@ void draw(){
   for (int i = 0; i < toys.size();i++){
     toys.get(i).show();
     toys.get(i).move();
+    toys.get(i).countdown();
   }
   for(int i = 0; i < 10;i++){
     cats.get(i).show();
